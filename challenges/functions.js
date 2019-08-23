@@ -13,22 +13,29 @@ mom("I",  "Love You", (whatYouSay)=>{
   console.log(whatYouSay);
 });
 
-
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+//addition 
+//addition 
 function consume(num1, num2, cb){
-  cb(num1+num2);
-  };
-function add(num1, num2, consume){
-  return consume;
-  };
-
+  console.log(cb(num1, num2))
+ };
+function add(num1, num2){
+return num1+num2 
+};
+//multiplication
+function consume(num1, num2, cb){
+ console.log(cb(num1, num2));
+ };
+function multiply(num1, num2){
+ return num1*num2
+ };
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
+console.log(consume(10, 16, multiply)); // 160
 function consume(first, last, cb){
   cb(first + last);
   };
